@@ -139,7 +139,8 @@
       "4.5.0"
     ],
     "category": [
-      "BNF"
+      "BNF",
+      "OSD"
     ],
     "author": [
       "Valentyn Kotelnikov"
@@ -152,6 +153,7 @@
       "geprc",
       "iflight",
       "nazgul",
+      "osd",
       "pavo",
       "pavopico",
       "pico",
@@ -225,6 +227,22 @@
       "keywords": [
         "iflight",
         "nazgul",
+        "valentyn"
+      ],
+      "author": "Valentyn Kotelnikov",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/osd/Valentyns-OSD.txt",
+      "hash": "078f63f1db639b798dd290536824f95e873feba315c1d226fdf4a6e77acb28f5",
+      "title": "Valentyn's OSD",
+      "firmware_version": [
+        "4.5.0"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "osd",
         "valentyn"
       ],
       "author": "Valentyn Kotelnikov",

@@ -1,0 +1,43 @@
+#$ TITLE: Valentyn's OSD
+#$ FIRMWARE_VERSION: 4.5.0
+#$ CATEGORY: OSD
+#$ STATUS: EXPERIMENTAL
+#$ KEYWORDS: osd, valentyn
+#$ AUTHOR: Valentyn Kotelnikov
+
+#$ OPTION BEGIN (CHECKED): Enable feature (default)
+feature OSD
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): osd_displayport_device (default)
+set osd_displayport_device = MSP
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): General and battery (default)
+set osd_flymode_pos = 2434
+set osd_throttle_pos = 2466
+set osd_current_pos = 2497
+set osd_altitude_pos = 18561
+set osd_warnings_pos = 14836
+set osd_avg_cell_voltage_pos = 2561
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): Control Signal (default)
+set osd_link_quality_pos = 2657
+set osd_rssi_dbm_pos = 2625
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): GPS (default)
+set osd_gps_speed_pos = 2209
+set osd_gps_lon_pos = 18529
+set osd_gps_lat_pos = 18497
+set osd_gps_sats_pos = 2081
+set osd_home_dir_pos = 2138
+set osd_home_dist_pos = 2241
+set osd_flight_dist_pos = 2273
+set osd_efficiency_pos = 2337
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): Compass (default)
+set osd_compass_bar_pos = 2102
+#$ OPTION END
