@@ -135,6 +135,7 @@
     "firmware_version": [
       "4.4.0",
       "4.4.1",
+      "4.4.2",
       "4.5.0"
     ],
     "category": [
@@ -146,6 +147,9 @@
     "keywords": [
       "betafpv",
       "chimera",
+      "cinebot",
+      "cinebot30",
+      "geprc",
       "iflight",
       "nazgul",
       "pavo",
@@ -169,6 +173,24 @@
         "pavopico",
         "pavo",
         "pico",
+        "valentyn"
+      ],
+      "author": "Valentyn Kotelnikov",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/bnf/GEPRC-Cinebot30.txt",
+      "hash": "7e31df10db30d2384995fff9ba99ef908f7bde448e0a6dbded74860447391442",
+      "title": "Valentyn's GEPRC Cinebo30",
+      "firmware_version": [
+        "4.4.2"
+      ],
+      "category": "BNF",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "geprc",
+        "cinebot",
+        "cinebot30",
         "valentyn"
       ],
       "author": "Valentyn Kotelnikov",
