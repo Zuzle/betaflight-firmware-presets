@@ -2,7 +2,7 @@
 #$ FIRMWARE_VERSION: 4.4.1
 #$ CATEGORY: BNF
 #$ STATUS: EXPERIMENTAL
-#$ KEYWORDS: betafpv, pavopico, pavo, pico
+#$ KEYWORDS: betafpv, pavopico, pavo, pico, valentyn
 #$ AUTHOR: Valentyn Kotelnikov
 
 #$ OPTION BEGIN (CHECKED): Reset (default)
