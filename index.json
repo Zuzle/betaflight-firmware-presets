@@ -133,7 +133,8 @@
   },
   "uniqueValues": {
     "firmware_version": [
-      "4.4.1"
+      "4.4.1",
+      "4.5.0"
     ],
     "category": [
       "BNF"
@@ -143,15 +144,18 @@
     ],
     "keywords": [
       "betafpv",
+      "chimera",
+      "iflight",
       "pavo",
       "pavopico",
-      "pico"
+      "pico",
+      "valentyn"
     ]
   },
   "presets": [
     {
-      "fullPath": "presets/bnf/PavoPico.txt",
-      "hash": "94e368680cf62030d7252929f5a7cfcae8fda5e26d04ba75ad4a276cc9e48dce",
+      "fullPath": "presets/bnf/BETAFPV-Pavo-Pico.txt",
+      "hash": "f9ba134b0ad424a17c2907a1e2f54a97d4414257f82394f8cb3adb5e9430279d",
       "title": "Valentyn's BETAFPV Pavo Pico",
       "firmware_version": [
         "4.4.1"
@@ -162,7 +166,25 @@
         "betafpv",
         "pavopico",
         "pavo",
-        "pico"
+        "pico",
+        "valentyn"
+      ],
+      "author": "Valentyn Kotelnikov",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/bnf/iFlight-Chimera-7-pro-v2.txt",
+      "hash": "6872f52716e0ae44b55e5451fadca596a3f2d1564980d35007683db21aacf940",
+      "title": "Valentyn's iFlight Chimera 7 pro v2",
+      "firmware_version": [
+        "4.5.0"
+      ],
+      "category": "BNF",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "iflight",
+        "chimera",
+        "valentyn"
       ],
       "author": "Valentyn Kotelnikov",
       "priority": 0
