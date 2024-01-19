@@ -133,6 +133,7 @@
   },
   "uniqueValues": {
     "firmware_version": [
+      "4.4.0",
       "4.4.1",
       "4.5.0"
     ],
@@ -146,6 +147,7 @@
       "betafpv",
       "chimera",
       "iflight",
+      "nazgul",
       "pavo",
       "pavopico",
       "pico",
@@ -184,6 +186,23 @@
       "keywords": [
         "iflight",
         "chimera",
+        "valentyn"
+      ],
+      "author": "Valentyn Kotelnikov",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/bnf/iFlight-Nazgul-5-v3.txt",
+      "hash": "b3ec4706be2823233137256833ea503d48263eb17159d9685070f087dd4d1e44",
+      "title": "Valentyn's iFlight Nazgul 5 v3",
+      "firmware_version": [
+        "4.4.0"
+      ],
+      "category": "BNF",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "iflight",
+        "nazgul",
         "valentyn"
       ],
       "author": "Valentyn Kotelnikov",

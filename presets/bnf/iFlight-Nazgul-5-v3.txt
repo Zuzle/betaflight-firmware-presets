@@ -1,0 +1,162 @@
+#$ TITLE: Valentyn's iFlight Nazgul 5 v3
+#$ FIRMWARE_VERSION: 4.4.0
+#$ CATEGORY: BNF
+#$ STATUS: EXPERIMENTAL
+#$ KEYWORDS: iflight, nazgul, valentyn
+#$ AUTHOR: Valentyn Kotelnikov
+
+#$ OPTION BEGIN (CHECKED): Reset (default)
+defaults nosave
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): Restore Settings (default)
+board_name IFLIGHT_BLITZ_F722
+manufacturer_id IFRC
+
+# name: Nazgulescu
+
+# feature
+feature GPS
+feature LED_STRIP
+
+# serial
+serial 0 131073 115200 57600 0 115200
+serial 3 2 115200 115200 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# led
+led 0 0,0::L:0
+led 1 1,0::L:0
+led 2 2,0::L:0
+led 3 3,0::L:0
+
+# aux
+aux 0 0 0 1800 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 46 2 1300 1700 0 0
+aux 3 13 2 900 1150 0 0
+aux 4 35 5 1800 2100 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 25 400 800 1600
+vtxtable powerlabels 25 400 800 1K6
+
+# vtx
+vtx 0 2 0 0 2 900 1100
+vtx 1 2 0 0 3 1400 1600
+vtx 2 2 0 0 4 1900 2100
+
+# master
+set gyro_lpf1_static_hz = 350
+set gyro_lpf2_static_hz = 0
+set dyn_notch_count = 2
+set dyn_notch_q = 500
+set gyro_lpf1_dyn_min_hz = 0
+set acc_trim_pitch = -11
+set acc_trim_roll = 2
+set acc_calibration = -16,-24,37,1
+set mag_hardware = NONE
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_setpoint_cutoff = 25
+set rc_smoothing_feedforward_cutoff = 25
+set blackbox_sample_rate = 1/16
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set failsafe_delay = 20
+set failsafe_off_delay = 80
+set failsafe_switch_mode = STAGE2
+set failsafe_procedure = AUTO-LAND
+set vbat_max_cell_voltage = 422
+set yaw_motors_reversed = ON
+set small_angle = 180
+set gps_sbas_mode = AUTO
+set gps_ublox_use_galileo = ON
+set simplified_gyro_filter_multiplier = 140
+set osd_vbat_pos = 289
+set osd_rssi_pos = 88
+set osd_link_quality_pos = 2656
+set osd_link_tx_power_pos = 24
+set osd_rssi_dbm_pos = 2624
+set osd_tim_2_pos = 3630
+set osd_flymode_pos = 2562
+set osd_throttle_pos = 2592
+set osd_vtx_channel_pos = 373
+set osd_current_pos = 2497
+set osd_mah_drawn_pos = 322
+set osd_craft_name_pos = 384
+set osd_gps_speed_pos = 2209
+set osd_gps_lon_pos = 2144
+set osd_gps_lat_pos = 2112
+set osd_gps_sats_pos = 2080
+set osd_home_dir_pos = 2106
+set osd_home_dist_pos = 2241
+set osd_flight_dist_pos = 153
+set osd_compass_bar_pos = 462
+set osd_altitude_pos = 18561
+set osd_power_pos = 388
+set osd_warnings_pos = 14900
+set osd_avg_cell_voltage_pos = 2529
+set osd_disarmed_pos = 203
+set osd_stat_bitmask = 46892
+set osd_displayport_device = MSP
+set debug_mode = GYRO_SCALED
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_power = 3
+set vtx_low_power_disarm = UNTIL_FIRST_ARM
+set vtx_freq = 5917
+set vcd_video_system = HD
+set craft_name = Nazgulescu
+set pilot_name = Valentyn Kotelni
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 80
+set dterm_lpf1_dyn_max_hz = 110
+set dterm_lpf1_dyn_expo = 8
+set dterm_lpf1_type = BIQUAD
+set dterm_lpf1_static_hz = 0
+set dterm_lpf2_static_hz = 0
+set p_pitch = 58
+set i_pitch = 78
+set d_pitch = 53
+set f_pitch = 148
+set p_roll = 56
+set i_roll = 75
+set d_roll = 51
+set f_roll = 142
+set p_yaw = 65
+set i_yaw = 90
+set f_yaw = 142
+set d_min_roll = 43
+set d_min_pitch = 43
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 45
+set feedforward_jitter_factor = 10
+set dyn_idle_min_rpm = 30
+set simplified_pids_mode = RP
+set simplified_master_multiplier = 125
+set simplified_i_gain = 75
+set simplified_d_gain = 115
+set simplified_dmax_gain = 60
+set simplified_feedforward_gain = 95
+set simplified_pitch_d_gain = 90
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 135
+set tpa_rate = 50
+set tpa_breakpoint = 1200
+
+rateprofile 2
+#$ OPTION END
