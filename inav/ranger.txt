@@ -1,4 +1,7 @@
-diff
+
+Entering CLI Mode, type 'exit' to return, or 'help'
+
+# diff
 
 # version
 # INAV/MATEKF405TE 6.1.1 Jun 13 2023 / 11:28:15 (42ced253)
@@ -114,9 +117,9 @@ osd_layout 0 32 1 16 V
 osd_layout 0 37 1 15 V
 osd_layout 0 40 1 6 V
 osd_layout 0 110 1 18 V
-osd_layout 0 130 23 0 H
-osd_layout 0 131 12 0 H
-osd_layout 0 132 0 0 H
+osd_layout 0 130 47 1 V
+osd_layout 0 131 47 2 V
+osd_layout 0 132 47 2 H
 osd_layout 0 133 8 6 H
 osd_layout 0 134 8 6 H
 osd_layout 0 135 23 8 H
@@ -491,9 +494,8 @@ set gyro_main_lpf_hz = 25
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 30
 set gyro_zero_x = 2
-set gyro_zero_y = -10
-set gyro_zero_z = 1
-set ins_gravity_cmss =  980.584
+set gyro_zero_y = -13
+set ins_gravity_cmss =  979.193
 set acc_hardware = ICM42605
 set acczero_x = -8
 set acczero_y = 2
@@ -540,6 +542,9 @@ set nav_fw_launch_max_altitude = 5000
 set nav_fw_launch_climb_angle = 25
 set smartport_fuel_unit = PERCENT
 set osd_video_system = BFHDCOMPAT
+set osd_switch_indicator_one_name = CRUS
+set osd_switch_indicator_zero_channel = 10
+set osd_switch_indicator_one_channel = 9
 set name = RANGER
 set pilot_name = VALENTYN
 set vtx_band = 4
