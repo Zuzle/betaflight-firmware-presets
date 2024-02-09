@@ -12,6 +12,8 @@ defaults nosave
 #$ OPTION BEGIN (CHECKED): Restore Settings (default)
 board_name IFLIGHT_BLITZ_F722
 manufacturer_id IFRC
+mcu_id 001c00085632501520303236
+signature
 
 # name: Nazgulescu
 
@@ -35,10 +37,13 @@ led 3 3,0::L:0
 
 # aux
 aux 0 0 0 1800 2100 0 0
-aux 1 1 1 1700 2100 0 0
-aux 2 46 2 1300 1700 0 0
-aux 3 13 2 900 1150 0 0
-aux 4 35 5 1800 2100 0 0
+aux 1 1 1 1800 2100 0 0
+aux 2 46 2 1800 2100 0 0
+aux 3 13 2 1800 2100 0 0
+aux 4 35 4 1800 2100 0 0
+
+# adjrange
+adjrange 0 0 3 900 2100 12 3 0 0
 
 # vtxtable
 vtxtable bands 5
@@ -113,7 +118,7 @@ set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 8
-set vtx_power = 3
+set vtx_power = 2
 set vtx_low_power_disarm = UNTIL_FIRST_ARM
 set vtx_freq = 5917
 set vcd_video_system = HD
@@ -158,5 +163,45 @@ set simplified_dterm_filter_multiplier = 135
 set tpa_rate = 50
 set tpa_breakpoint = 1200
 
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rateprofile_name = FAST
+
+rateprofile 1
+
+# rateprofile 1
+set rateprofile_name = MEDIUM
+set roll_expo = 10
+set pitch_expo = 10
+set yaw_expo = 10
+set roll_srate = 65
+set pitch_srate = 65
+set yaw_srate = 65
+
 rateprofile 2
+
+# rateprofile 2
+set rateprofile_name = SLOW
+set roll_expo = 30
+set pitch_expo = 30
+set yaw_expo = 30
+set roll_srate = 60
+set pitch_srate = 60
+set yaw_srate = 60
+set throttle_limit_percent = 80
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
 #$ OPTION END

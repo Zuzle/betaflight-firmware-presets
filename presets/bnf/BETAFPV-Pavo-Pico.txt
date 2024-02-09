@@ -55,13 +55,13 @@ led 1 1,0::CO:10
 
 # aux
 aux 0 0 0 1800 2100 0 0
-aux 1 1 1 1800 2100 0 0
-aux 2 13 3 1800 2100 0 0
-aux 3 28 3 1400 1600 0 0
+aux 1 1 1 1200 2100 0 0
+aux 2 13 2 1800 2100 0 0
+aux 3 28 5 900 1700 0 0
 aux 4 35 4 1650 2100 0 0
 
 # adjrange
-adjrange 0 0 2 900 2100 12 2 0 0
+adjrange 0 0 3 900 2100 12 3 0 0
 
 # master
 set gyro_lpf2_static_hz = 0
@@ -111,6 +111,31 @@ profile 0
 # profile 0
 set profile_name = Default
 
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rateprofile_name = FAST
+
+rateprofile 1
+
+# rateprofile 1
+set rateprofile_name = MEDIUM
+set thr_expo = 60
+set roll_srate = 38
+set pitch_srate = 38
+set yaw_srate = 38
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 80
+
 rateprofile 2
 
 # rateprofile 2
@@ -121,4 +146,10 @@ set pitch_srate = 38
 set yaw_srate = 38
 set throttle_limit_type = SCALE
 set throttle_limit_percent = 90
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
 #$ OPTION END
