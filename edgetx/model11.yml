@@ -1,6 +1,6 @@
 semver: 2.8.4
 header:
-  name: Simulator
+  name: Sim USB
   bitmap: ""
   labels: ""
 noGlobalFunctions: 0
