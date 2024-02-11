@@ -1,6 +1,6 @@
 semver: 2.8.4
 header:
-  name: Chimera7 868
+  name: Chimera868
   bitmap: ""
   labels: ""
   modelId:
@@ -185,23 +185,6 @@ mixData:
     flightModes: 000000000
     offset: 0
     name: TUN
-  - destCh: 8
-    srcRaw: I8
-    weight: 100
-    swtch: NONE
-    curve:
-      type: 0
-      value: 0
-    delayUp: 0
-    delayDown: 0
-    speedUp: 0
-    speedDown: 0
-    carryTrim: 0
-    mltpx: ADD
-    mixWarn: 0
-    flightModes: 000000000
-    offset: 0
-    name: TUR
 limitData:
   4:
     min: 0
@@ -225,7 +208,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ""
+    name: Ailero
   - srcRaw: Ele
     scale: 0
     mode: 3
@@ -238,7 +221,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ""
+    name: Elevat
   - srcRaw: Thr
     scale: 0
     mode: 3
@@ -251,7 +234,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ""
+    name: Thrott
   - srcRaw: Rud
     scale: 0
     mode: 3
@@ -264,7 +247,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ""
+    name: Rudder
   - srcRaw: SE
     scale: 0
     mode: 3
@@ -277,7 +260,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ARM
+    name: Arm
   - srcRaw: SB
     scale: 0
     mode: 3
@@ -290,7 +273,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: MODES
+    name: Mode
   - srcRaw: SF
     scale: 0
     mode: 3

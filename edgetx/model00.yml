@@ -1,6 +1,6 @@
 semver: 2.8.4
 header:
-  name: Sim-Ble
+  name: Simulator
   bitmap: ""
   labels: ""
   modelId:

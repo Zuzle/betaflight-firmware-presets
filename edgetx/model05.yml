@@ -16,7 +16,7 @@ timers:
     start: 0
     persistent: 1
     countdownStart: 0
-    value: 500
+    value: 504
     showElapsed: 0
 noGlobalFunctions: 0
 thrTrim: 0
@@ -65,7 +65,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: ""
+    name: Ailero
   - destCh: 1
     srcRaw: I1
     weight: 100
@@ -82,7 +82,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: ""
+    name: Elevat
   - destCh: 2
     srcRaw: I2
     weight: 100
@@ -99,7 +99,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: ""
+    name: Thrott
   - destCh: 3
     srcRaw: I3
     weight: 100
@@ -116,7 +116,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: ""
+    name: Rudder
   - destCh: 4
     srcRaw: I4
     weight: 100
@@ -133,7 +133,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: ARM
+    name: Arm
   - destCh: 5
     srcRaw: I5
     weight: 100
@@ -150,9 +150,9 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: MODES
+    name: Mode
   - destCh: 6
-    srcRaw: SB
+    srcRaw: I6
     weight: 100
     swtch: NONE
     curve:
@@ -167,9 +167,9 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: ""
+    name: Buzzer
   - destCh: 7
-    srcRaw: SC
+    srcRaw: I7
     weight: 100
     swtch: NONE
     curve:
@@ -184,24 +184,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: ""
-  - destCh: 8
-    srcRaw: SD
-    weight: 100
-    swtch: NONE
-    curve:
-      type: 0
-      value: 0
-    delayUp: 0
-    delayDown: 0
-    speedUp: 0
-    speedDown: 0
-    carryTrim: 0
-    mltpx: ADD
-    mixWarn: 0
-    flightModes: 000000000
-    offset: 0
-    name: ""
+    name: Tune
 limitData:
   1:
     min: 0
@@ -234,7 +217,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ""
+    name: Ailero
   - srcRaw: Ele
     scale: 0
     mode: 3
@@ -247,7 +230,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ""
+    name: Elevat
   - srcRaw: Thr
     scale: 0
     mode: 3
@@ -260,7 +243,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ""
+    name: Thrott
   - srcRaw: Rud
     scale: 0
     mode: 3
@@ -273,7 +256,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ""
+    name: Rudder
   - srcRaw: SE
     scale: 0
     mode: 3
@@ -286,8 +269,8 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ARM
-  - srcRaw: SF
+    name: Arm
+  - srcRaw: SB
     scale: 0
     mode: 3
     chn: 5
@@ -299,8 +282,8 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: MODES
-  - srcRaw: SD
+    name: Mode
+  - srcRaw: SF
     scale: 0
     mode: 3
     chn: 6
@@ -310,6 +293,32 @@ expoData:
     offset: 0
     curve:
       type: 1
+      value: 0
+    trimSource: 0
+    name: Buzzer
+  - srcRaw: SC
+    scale: 0
+    mode: 3
+    chn: 7
+    swtch: NONE
+    flightModes: 000000000
+    weight: 100
+    offset: 0
+    curve:
+      type: 0
+      value: 0
+    trimSource: 0
+    name: Tune
+  - srcRaw: SG
+    scale: 0
+    mode: 3
+    chn: 8
+    swtch: NONE
+    flightModes: 000000000
+    weight: 100
+    offset: 0
+    curve:
+      type: 0
       value: 0
     trimSource: 0
     name: Turtle
@@ -327,36 +336,93 @@ inputNames:
   5:
     val: Mod
   6:
+    val: Buz
+  7:
+    val: Tun
+  8:
     val: Tur
+logicalSw:
+  0:
+    func: FUNC_GREATER
+    def: NONE,SG
+    delay: 0
+    duration: 0
+    andsw: NONE
+  1:
+    func: FUNC_STICKY
+    def: L1,SG0
+    delay: 0
+    duration: 0
+    andsw: NONE
+  2:
+    func: FUNC_GREATER
+    def: NONE,SH
+    delay: 0
+    duration: 0
+    andsw: NONE
+  3:
+    func: FUNC_STICKY
+    def: L3,SH0
+    delay: 0
+    duration: 0
+    andsw: NONE
 customFn:
   0:
     swtch: SE0
     func: PLAY_TRACK
     def: armed,1x
   1:
-    swtch: SF2
+    swtch: SB1
     func: PLAY_TRACK
     def: fm-ang,1x
   2:
-    swtch: SF0
+    swtch: SB2
+    func: PLAY_TRACK
+    def: fm-ang,1x
+  3:
+    swtch: SB0
     func: PLAY_TRACK
     def: fm-acr,1x
-  3:
+  4:
     swtch: SE2
     func: PLAY_TRACK
     def: disarm,1x
-  4:
+  5:
     swtch: SE0
     func: LOGS
     def: 10
-  5:
-    swtch: SB0
+  6:
+    swtch: SF2
     func: PLAY_TRACK
     def: buzact,1x
-  6:
-    swtch: SB1
+  7:
+    swtch: SC0
+    func: PLAY_TRACK
+    def: fm-spd,1x
+  8:
+    swtch: SC1
+    func: PLAY_TRACK
+    def: fm-nrm,1x
+  9:
+    swtch: SC2
+    func: PLAY_TRACK
+    def: fm-flt,1x
+  10:
+    swtch: "!L2"
+    func: OVERRIDE_CHANNEL
+    def: 8,90,1
+  11:
+    swtch: "!L2"
+    func: BACKGND_MUSIC
+    def: on
+  12:
+    swtch: SF2
     func: PLAY_TRACK
     def: rth,1x
+  13:
+    swtch: "!L4"
+    func: OVERRIDE_CHANNEL
+    def: 9,90,1
 swashR:
   type: TYPE_NONE
   value: 0

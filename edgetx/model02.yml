@@ -65,7 +65,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: AIL
+    name: Ailero
   - destCh: 1
     srcRaw: I1
     weight: 100
@@ -82,7 +82,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: ELE
+    name: Elevat
   - destCh: 2
     srcRaw: I2
     weight: 100
@@ -99,7 +99,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: THR
+    name: Thrott
   - destCh: 3
     srcRaw: I3
     weight: 100
@@ -116,7 +116,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: RUD
+    name: Rudder
   - destCh: 4
     srcRaw: I4
     weight: 100
@@ -133,7 +133,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: ARM
+    name: Arm
   - destCh: 5
     srcRaw: I5
     weight: 100
@@ -150,7 +150,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: MOD
+    name: Mode
   - destCh: 6
     srcRaw: I6
     weight: 100
@@ -167,7 +167,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: BUZ
+    name: Buzzer
   - destCh: 7
     srcRaw: I7
     weight: 100
@@ -184,24 +184,7 @@ mixData:
     mixWarn: 0
     flightModes: 000000000
     offset: 0
-    name: TUN
-  - destCh: 8
-    srcRaw: I8
-    weight: 100
-    swtch: NONE
-    curve:
-      type: 0
-      value: 0
-    delayUp: 0
-    delayDown: 0
-    speedUp: 0
-    speedDown: 0
-    carryTrim: 0
-    mltpx: ADD
-    mixWarn: 0
-    flightModes: 000000000
-    offset: 0
-    name: TUR
+    name: Tune
 limitData:
   1:
     min: 0
@@ -234,7 +217,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: AILERO
+    name: Ailero
   - srcRaw: Ele
     scale: 0
     mode: 3
@@ -247,7 +230,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ELEVAT
+    name: Elevat
   - srcRaw: Thr
     scale: 0
     mode: 3
@@ -260,7 +243,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: THROTT
+    name: Thrott
   - srcRaw: Rud
     scale: 0
     mode: 3
@@ -273,7 +256,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: RUDDER
+    name: Rudder
   - srcRaw: SE
     scale: 0
     mode: 3
@@ -286,7 +269,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: ARM
+    name: Arm
   - srcRaw: SB
     scale: 0
     mode: 3
@@ -299,7 +282,7 @@ expoData:
       type: 1
       value: 0
     trimSource: 0
-    name: MODES
+    name: Mode
   - srcRaw: SF
     scale: 0
     mode: 3
