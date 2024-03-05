@@ -91,7 +91,7 @@ set simplified_gyro_filter_multiplier = 140
 set osd_vbat_pos = 289
 set osd_rssi_pos = 88
 set osd_link_quality_pos = 2656
-set osd_link_tx_power_pos = 24
+set osd_link_tx_power_pos = 2663
 set osd_rssi_dbm_pos = 2624
 set osd_tim_2_pos = 3630
 set osd_flymode_pos = 2562
@@ -113,12 +113,13 @@ set osd_power_pos = 388
 set osd_warnings_pos = 14900
 set osd_avg_cell_voltage_pos = 2529
 set osd_disarmed_pos = 203
+set osd_rate_profile_name_pos = 2567
 set osd_stat_bitmask = 46892
 set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 8
-set vtx_power = 2
+set vtx_power = 3
 set vtx_low_power_disarm = UNTIL_FIRST_ARM
 set vtx_freq = 5917
 set vcd_video_system = HD
@@ -203,5 +204,6 @@ set throttle_limit_percent = 80
 rateprofile 3
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
+
 #$ OPTION END

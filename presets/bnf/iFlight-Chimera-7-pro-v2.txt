@@ -46,7 +46,7 @@ feature OSD
 # serial
 serial 0 131073 115200 57600 0 115200
 serial 1 64 115200 57600 0 115200
-serial 3 2 115200 115200 0 115200
+serial 3 2 115200 57600 0 115200
 
 # beacon
 beacon RX_LOST
@@ -79,6 +79,7 @@ set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
 set acc_calibration = -59,-121,2,1
 set mag_align_yaw = 1800
+set mag_hardware = NONE
 set mag_calibration = -129,-827,-602
 set blackbox_sample_rate = 1/16
 set dshot_idle_value = 800
@@ -90,11 +91,13 @@ set yaw_motors_reversed = ON
 set small_angle = 180
 set gps_sbas_mode = AUTO
 set gps_ublox_use_galileo = ON
+set gps_set_home_point_once = ON
 set gps_rescue_allow_arming_without_fix = ON
 set yaw_deadband = 5
 set simplified_gyro_filter = OFF
 set simplified_gyro_filter_multiplier = 105
 set osd_link_quality_pos = 2657
+set osd_link_tx_power_pos = 2664
 set osd_rssi_dbm_pos = 2625
 set osd_flymode_pos = 2434
 set osd_throttle_pos = 2466
@@ -110,6 +113,7 @@ set osd_compass_bar_pos = 2102
 set osd_altitude_pos = 18561
 set osd_warnings_pos = 14836
 set osd_avg_cell_voltage_pos = 2561
+set osd_rate_profile_name_pos = 2439
 set osd_efficiency_pos = 2337
 set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
@@ -202,4 +206,5 @@ rateprofile 3
 
 # restore original rateprofile selection
 rateprofile 1
+
 #$ OPTION END

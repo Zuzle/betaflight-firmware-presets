@@ -1,7 +1,4 @@
-
-Entering CLI Mode, type 'exit' to return, or 'help'
-
-# diff
+diff
 
 # version
 # INAV/MATEKF405TE 6.1.1 Jun 13 2023 / 11:28:15 (42ced253)
@@ -29,9 +26,9 @@ smix 3 1 14 100 0 -1
 smix 4 2 14 -100 0 -1
 
 # Outputs [servo]
-servo 1 1000 2000 1525 -100
-servo 2 1000 2000 1525 -100
-servo 3 1000 2000 1450 -100
+servo 1 1000 2000 1505 -100
+servo 2 1000 2000 1505 -100
+servo 3 1000 2000 1460 -100
 
 # safehome
 
@@ -75,15 +72,15 @@ led 0 5,7::CB:2
 
 # Modes [aux]
 aux 0 0 0 1800 2100
-aux 1 1 2 1800 2100
-aux 2 2 2 1300 1625
-aux 3 53 4 1825 2100
-aux 4 11 3 1300 1700
-aux 5 10 3 1800 2100
-aux 6 21 1 1800 2100
+aux 1 1 1 1800 2100
+aux 2 2 1 1300 1625
+aux 3 53 3 1300 1625
+aux 4 11 3 1800 2075
+aux 5 10 2 900 1200
+aux 6 21 5 1800 2100
 aux 7 34 6 1800 2100
-aux 8 42 1 1800 2100
-aux 9 13 3 1875 2100
+aux 8 42 5 1800 2100
+aux 9 13 2 900 1200
 
 # Adjustments [adjrange]
 
@@ -98,9 +95,9 @@ aux 9 13 3 1875 2100
 osd_layout 0 0 1 19 V
 osd_layout 0 1 12 0 H
 osd_layout 0 3 8 6 V
-osd_layout 0 7 2 11 V
-osd_layout 0 9 1 12 V
-osd_layout 0 11 2 13 V
+osd_layout 0 7 2 10 V
+osd_layout 0 9 1 11 V
+osd_layout 0 11 2 12 V
 osd_layout 0 12 23 4 H
 osd_layout 0 13 3 5 V
 osd_layout 0 14 1 1 V
@@ -114,6 +111,7 @@ osd_layout 0 26 8 4 V
 osd_layout 0 28 23 11 H
 osd_layout 0 30 8 18 V
 osd_layout 0 32 1 16 V
+osd_layout 0 35 2 14 V
 osd_layout 0 37 1 15 V
 osd_layout 0 40 1 6 V
 osd_layout 0 110 1 18 V
@@ -493,9 +491,10 @@ osd_layout 3 87 0 10 H
 set gyro_main_lpf_hz = 25
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 30
-set gyro_zero_x = 2
-set gyro_zero_y = -13
-set ins_gravity_cmss =  979.193
+set gyro_zero_x = 1
+set gyro_zero_y = -16
+set gyro_zero_z = -2
+set ins_gravity_cmss =  981.321
 set acc_hardware = ICM42605
 set acczero_x = -8
 set acczero_y = 2
@@ -513,8 +512,9 @@ set maggain_y = 894
 set maggain_z = 965
 set baro_hardware = SPL06
 set motor_pwm_rate = 400
-set motor_pwm_protocol = STANDARD
+set motor_pwm_protocol = DSHOT600
 set failsafe_procedure = RTH
+set current_meter_scale = 250
 set platform_type = AIRPLANE
 set has_flaps = ON
 set model_preview_type = 14
@@ -542,6 +542,7 @@ set nav_fw_launch_max_altitude = 5000
 set nav_fw_launch_climb_angle = 25
 set smartport_fuel_unit = PERCENT
 set osd_video_system = BFHDCOMPAT
+set osd_crsf_lq_format = TYPE2
 set osd_switch_indicator_one_name = CRUS
 set osd_switch_indicator_zero_channel = 10
 set osd_switch_indicator_one_channel = 9
@@ -585,7 +586,7 @@ battery_profile 1
 set bat_cells = 3
 set vbat_min_cell_voltage = 290
 set vbat_warning_cell_voltage = 300
-set battery_capacity = 3000
+set battery_capacity = 3120
 set throttle_idle =  5.000
 set nav_fw_launch_thr = 1800
 set nav_fw_launch_idle_thr = 1200
