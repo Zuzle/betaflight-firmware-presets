@@ -86,6 +86,7 @@ set pid_process_denom = 2
 set osd_vbat_pos = 449
 set osd_rssi_pos = 192
 set osd_link_quality_pos = 2624
+set osd_link_tx_power_pos = 2631
 set osd_rssi_dbm_pos = 2592
 set osd_rsnr_pos = 160
 set osd_tim_2_pos = 3629
