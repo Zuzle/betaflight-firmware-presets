@@ -23,7 +23,7 @@ feature LED_STRIP
 
 # serial
 serial 0 131073 115200 57600 0 115200
-serial 3 2 115200 115200 0 115200
+serial 3 2 115200 57600 0 115200
 
 # beacon
 beacon RX_LOST
@@ -86,7 +86,9 @@ set vbat_max_cell_voltage = 422
 set yaw_motors_reversed = ON
 set small_angle = 180
 set gps_sbas_mode = AUTO
+set gps_auto_baud = ON
 set gps_ublox_use_galileo = ON
+set gps_set_home_point_once = ON
 set simplified_gyro_filter_multiplier = 140
 set osd_vbat_pos = 289
 set osd_rssi_pos = 88
