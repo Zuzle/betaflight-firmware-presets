@@ -12,6 +12,8 @@ defaults nosave
 #$ OPTION BEGIN (CHECKED): Restore Settings (default)
 board_name GEPRC_F722_AIO
 manufacturer_id GEPR
+mcu_id 0023003f3232510438393431
+signature
 
 # name: Cinebotescu
 
@@ -42,11 +44,14 @@ beacon RX_SET
 
 # aux
 aux 0 0 0 1800 2100 0 0
-aux 1 1 1 1775 2100 0 0
-aux 2 46 2 1300 1700 0 0
-aux 3 13 2 900 1200 0 0
-aux 4 35 4 1725 2100 0 0
-aux 5 40 3 1700 2100 0 0
+aux 1 1 1 1200 2100 0 0
+aux 2 46 2 1800 2100 0 0
+aux 3 13 2 1800 2100 0 0
+aux 4 35 4 1800 2100 0 0
+aux 5 40 5 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 3 900 2100 12 3 0 0
 
 # vtxtable
 vtxtable bands 6
@@ -93,24 +98,34 @@ set gps_rescue_velocity_p = 80
 set gps_rescue_velocity_i = 20
 set gps_rescue_velocity_d = 15
 set gps_rescue_yaw_p = 40
-set osd_vbat_pos = 34
-set osd_link_quality_pos = 2626
-set osd_tim_2_pos = 3628
-set osd_flymode_pos = 2563
-set osd_throttle_pos = 2593
-set osd_vtx_channel_pos = 404
-set osd_current_pos = 2498
-set osd_craft_name_pos = 43
-set osd_gps_speed_pos = 2210
-set osd_gps_lon_pos = 18529
-set osd_gps_lat_pos = 18497
-set osd_gps_sats_pos = 2081
-set osd_home_dir_pos = 2170
-set osd_home_dist_pos = 2242
-set osd_altitude_pos = 2178
-set osd_warnings_pos = 2581
-set osd_avg_cell_voltage_pos = 2530
+set osd_vbat_pos = 289
+set osd_rssi_pos = 88
+set osd_link_quality_pos = 2656
+set osd_link_tx_power_pos = 2663
+set osd_rssi_dbm_pos = 2624
+set osd_tim_2_pos = 3630
+set osd_flymode_pos = 2562
+set osd_throttle_pos = 2592
+set osd_vtx_channel_pos = 373
+set osd_current_pos = 2497
+set osd_mah_drawn_pos = 322
+set osd_craft_name_pos = 384
+set osd_gps_speed_pos = 2209
+set osd_gps_lon_pos = 2144
+set osd_gps_lat_pos = 2112
+set osd_gps_sats_pos = 2080
+set osd_home_dir_pos = 2106
+set osd_home_dist_pos = 2241
+set osd_flight_dist_pos = 153
+set osd_compass_bar_pos = 462
+set osd_altitude_pos = 18561
+set osd_power_pos = 388
+set osd_warnings_pos = 14900
+set osd_avg_cell_voltage_pos = 2529
 set osd_battery_usage_pos = 609
+set osd_disarmed_pos = 203
+set osd_rate_profile_name_pos = 2567
+set osd_stat_bitmask = 46892
 set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
 set vcd_video_system = HD
@@ -118,6 +133,8 @@ set pinio_config = 129,1,1,1
 set pinio_box = 39,40,41,42
 set craft_name = Cinebotescu
 set pilot_name = Valentyn
+
+profile 0
 
 profile 1
 
@@ -139,5 +156,34 @@ set simplified_d_gain = 130
 set simplified_pi_gain = 125
 set simplified_dmax_gain = 15
 
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 1
+
+rateprofile 0
+
+# rateprofile 0
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
+
+rateprofile 1
+
+rateprofile 2
+
+# rateprofile 2
+set roll_expo = 30
+set pitch_expo = 30
+set yaw_expo = 30
+set roll_srate = 63
+set pitch_srate = 63
+set yaw_srate = 63
+
+rateprofile 3
+
+# restore original rateprofile selection
 rateprofile 0
 #$ OPTION END
