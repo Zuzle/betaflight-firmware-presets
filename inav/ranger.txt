@@ -26,9 +26,9 @@ smix 3 1 14 100 0 -1
 smix 4 2 14 -100 0 -1
 
 # Outputs [servo]
-servo 1 1000 2000 1505 -100
-servo 2 1000 2000 1505 -100
-servo 3 1000 2000 1460 -100
+servo 1 1000 2000 1535 -100
+servo 2 1000 2000 1535 -100
+servo 3 1000 2000 1470 -100
 
 # safehome
 
@@ -115,6 +115,7 @@ osd_layout 0 35 2 14 V
 osd_layout 0 37 1 15 V
 osd_layout 0 40 1 6 V
 osd_layout 0 110 1 18 V
+osd_layout 0 112 6 19 V
 osd_layout 0 130 47 1 V
 osd_layout 0 131 47 2 V
 osd_layout 0 132 47 2 H
@@ -492,9 +493,8 @@ set gyro_main_lpf_hz = 25
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 30
 set gyro_zero_x = 1
-set gyro_zero_y = -16
-set gyro_zero_z = -2
-set ins_gravity_cmss =  981.321
+set gyro_zero_y = -12
+set ins_gravity_cmss =  981.374
 set acc_hardware = ICM42605
 set acczero_x = -8
 set acczero_y = 2
@@ -514,6 +514,7 @@ set baro_hardware = SPL06
 set motor_pwm_rate = 400
 set motor_pwm_protocol = DSHOT600
 set failsafe_procedure = RTH
+set align_board_pitch = 6
 set current_meter_scale = 250
 set platform_type = AIRPLANE
 set has_flaps = ON
