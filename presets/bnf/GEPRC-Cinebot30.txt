@@ -166,15 +166,20 @@ profile 1
 rateprofile 0
 
 # rateprofile 0
+set rateprofile_name = FAST
 set roll_srate = 70
 set pitch_srate = 70
 set yaw_srate = 70
 
 rateprofile 1
 
+# rateprofile 1
+set rateprofile_name = MEDIUM
+
 rateprofile 2
 
 # rateprofile 2
+set rateprofile_name = SLOW
 set roll_expo = 30
 set pitch_expo = 30
 set yaw_expo = 30
@@ -185,5 +190,5 @@ set yaw_srate = 63
 rateprofile 3
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 #$ OPTION END
